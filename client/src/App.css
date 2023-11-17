@@ -1,0 +1,101 @@
+/* Header.css */
+
+.header img {
+  width: 150px;
+  padding: 5px;
+    
+  }
+  
+  /* Style pour le corps de la page */
+body {
+    background-color: #171b22;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style pour le conteneur principal */
+  .books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  /* Style pour chaque livre */
+  .book {
+    width: calc(30% - 20px);
+    margin: 1%;
+    background-color: #171b22;
+    border: 2px solid #00e3aa;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Effet d'hover sur chaque livre */
+  .book:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Style pour l'image du livre */
+  .book img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    
+  }
+  
+  /* Style pour les titres et auteurs */
+  .book h2, .book h3, .book p {
+    margin: 10px;
+    color: #fff;
+  }
+  
+  /* Style pour les boutons Delete et Update */
+  .book button {
+    background-color: #00e3aa;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+    
+  a {
+    text-decoration: none;
+    color: white; /*par exemple*/
+   }
+  /* Style spécifique pour le bouton Delete */
+  .book .delete {
+    background-color: #FC5147;
+  }
+  
+  /* Style pour le bouton "Add a new book" */
+  button {
+    background-color: #00e3aa;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 20px auto; 
+    display: block; 
+}
+  
+  /* Style pour le titre de l'application */
+  h1 {
+    color: #1F4339;
+    text-align: center;
+    font-family: 'Yellowtail', sans-serif;
+    font-size: 50px;
+
+  }
+  
