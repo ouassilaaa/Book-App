@@ -33,6 +33,29 @@ body {
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
   }
+
+  /* Media query pour les écrans de taille small (smartphones) */
+@media only screen and (max-width: 600px) {
+  .book img {
+    width: 50%;
+  }
+  .book {
+    width: 100%;
+    margin: 2% 0;
+  }
+}
+
+/* Media query pour les écrans de taille medium (tablettes) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .book img {
+    width: 50%;
+  }
+  .book {
+    width: calc(50% - 20px);
+    margin: 2%;
+  }
+}
+  
   
   /* Effet d'hover sur chaque livre */
   .book:hover {
@@ -133,10 +156,6 @@ body {
   color: #ecf0f1; 
 }
 
-h1 {
-  text-align: center;
-  color: #2ecc71; 
-}
 
 input {
   width: 100%;
