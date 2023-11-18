@@ -13,7 +13,7 @@ app.use(cors());
 const db= mysql2.createConnection({
     host:'localhost',
     user:'root',
-    password:'Ouassila9',
+    password:'',
     database:'bookapp'
 });
 
