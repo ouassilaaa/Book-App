@@ -39,7 +39,8 @@ const Update = () => {
             <input type="text" placeholder='Author'onChange={handleChange}  name='author'/>
             <input type="text" placeholder='Description'onChange={handleChange}  name='note'/>
             <input type="text"placeholder='Cover' onChange={handleChange} name='cover' />
-            <button onClick={handleClick}>Update</button> {error && "Something went wrong!"} <Link to="/">Back to the books</Link>
+            <button onClick={handleClick}>Update</button> {error && "Something went wrong!"} 
+            <div className="link-update"><Link to="/">Back to the books</Link></div>
         </div>
     );
 };

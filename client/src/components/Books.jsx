@@ -6,6 +6,8 @@ import Image from '../images/bookcover.jpg';
 const Books = () => {
 
     const[books,setBooks]=useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+
 
     useEffect(()=>{
         const fetchAllBooks= async()=>{
@@ -31,12 +33,22 @@ const Books = () => {
     }
   };
 
+  //search filter
+  const filteredBooks = books.filter((book) =>
+    book.book_title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+
 
     return (
         <div>
             <h1>Welcome to your library</h1>
+            <div className='search-bar-container'> 
+                <input className='search-bar' 
+                type="text" placeholder="Search by title" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
+            </div>
             <div className="books">
-                {books.map((book)=>(
+                {filteredBooks.map((book)=>(
                     <div className="book" key={book.id_book}>
                         {<img src={Image} alt="" />}
                         <h2>{book.book_title}</h2>

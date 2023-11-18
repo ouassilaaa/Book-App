@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import {useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 
 const Add = () => {
@@ -40,7 +42,8 @@ const Add = () => {
             <input type="text" placeholder='Author'onChange={handleChange}  name='author'/>
             <input type="text" placeholder='Description'onChange={handleChange}  name='note'/>
             <input type="text"placeholder='Cover' onChange={handleChange} name='cover' />
-            <button onClick={handleClick}>Add</button>
+            <button onClick={handleClick}>Add </button>
+            <Link to="/">Back to the books</Link>
         </div>
     );
 };

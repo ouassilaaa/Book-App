@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 
 //SELECT: fetch data
 app.get("/books", (req, res) => {
-  const sql = "SELECT id_book, book_title, book_author, book_update, book_cover FROM book";
+  const sql = "SELECT book_title, book_author, book_note, book_cover FROM book";
   db.query(sql, (err, data) => {
     if (err) {
       console.log(err);
